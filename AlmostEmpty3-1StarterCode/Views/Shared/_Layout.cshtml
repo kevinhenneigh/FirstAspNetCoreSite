@@ -1,18 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    @*<title>@ViewBag.Title</title>*@
-    <title>@ViewData["Title"]</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to my first site</h1>
-    </header>
-    <main>
-        @RenderBody()
-    </main>
-    <footer>
-        &copy;@DateTime.Today.Year
-    </footer>
-</body>
+    <head>
+        @*<title>@ViewBag.Title</title>*@
+        <title>@ViewData["Title"]</title>
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to my first site</h1>
+        </header>
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Home Page</a><br />
+            <a asp-controller="Home" asp-action="About">About Page</a><br />
+            <a asp-controller="Home" asp-action="Products">Products Page</a><br />
+
+        </nav>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+            &copy;@DateTime.Today.Year
+        </footer>
+    </body>
 </html>
